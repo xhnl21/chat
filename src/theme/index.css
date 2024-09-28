@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face{
+        font-family:'source sans pro bolds';
+        font-style:normal;
+        font-weight:700;
+        src:local('Source Sans Pro'),
+        url(/assets/fonts/Source-Sans-Pro/SourceSansPro-Bold.woff) format('woff')
+    }
+    
+    @font-face{
+        font-family:'source sans pro regulars';
+        font-style:normal;
+        font-weight:400;
+        src:local('Source Sans Pro'),
+        url(/assets/fonts/Source-Sans-Pro/SourceSansPro-Regular.woff) format('woff')
+    }    
+}
+
+.chat-start .chat-bubble{
+    @apply rounded-tl-none rounded-bl-[1rem];
+}
+
+.chat-end .chat-bubble{
+    @apply rounded-tr-none rounded-br-[1rem];
+}
+
+.chat-bubble:before{
+    @apply top-0 [transform:rotateX(180deg)];
+}
+
+.chat-image {
+    align-self: auto;
+}
+
+.chat-end .chat-image {
+    grid-column-start: 2;
+    align-self: baseline;
+}
+
+.chat-start .chat-bubble {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.chat-end .chat-bubble {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.chat {
+    column-gap: 0.30rem;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.chat-bubble-blue {
+    background-color: #55bbe2;
+    color: #e7f5fb;
+}
+
+.chat-bubble-white {
+    background-color: #fefffe;
+    color: #5d5d5c;
+}
+
+.chat-start .chat-bubbles:before {
+    inset-inline-start: inherit;
+}
+
+.chat-end .chat-bubbles:before {
+    inset-inline-start: inherit;
+}
+
+.avatar.onlines:before {
+    outline-style: none;
+    outline-width: 0px;
+    width: 25%;
+    height: 25%;
+    top: 76%;
+    right: 4%;
+}
+
+.titles{
+    color: #5c5c5c;
+  }
+  
+  .subtitle{
+    color: #fa528a; 
+    font-size: 10px;
+  }
+  
+  .contentImgText{
+    margin: auto;
+    display: block;
+    margin-bottom: 25px;
+    height: 200px;
+    width: 200px;
+    max-height: 230px;
+    max-width: 230px;
+    border-radius: 50%;
+  }
+  
+  .parr{ 
+    color: #868687; 
+    font-size: 12px;
+  }
+  
+  .circleText{
+    display: block;
+    text-align: center;
+    padding-top: 18px;
+    font-size: 10px; 
+    color: white;
+  }
+  
+  .circle{
+    margin: auto;
+    display: block;
+    background: #5bed90;
+    height: 50px;
+    width: 50px;
+    top: 17px;
+    right: -35px;
+  }
+  .colorBtnA{
+      --background: #3d3d3c;
+      --color: white;
+  }
+  .colorBtnB{
+      --background: blue;
+      --color: white;
+  }
+  .chevronBackIcon{
+    width: 35px;
+  }
+  
+  .title{
+    text-align: center;
+  }
+  
+  .favorite {
+      position: absolute;
+      right: 0.1px;
+  }
+
+.input {
+    border-radius: unset;
+    border-width: 0px;
+    border-color: inherit;
+    background-color: inherit;
+    max-width: 100%;
+}
+
+.inputChat{
+    font-size: 12px; 
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+  .inputChatSize{
+    width: 100%; 
+    max-width: 100%;
+  }
+
+.chat-bubble-start-ext{
+    font-size: 12px; 
+    padding-left: 4%;
+    padding-right: 7%;
+}
+
+.chat-bubble-end-ext{
+    font-size: 12px; 
+    padding-left: 7%;
+    padding-right: 4%;
+}
